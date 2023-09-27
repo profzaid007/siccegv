@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>contact us</title>
+    <style>
+        body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #002245;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:#EEEEEE;
+}
+.header .logo {
+  font-size: 25px;
+  font-family: 'Sriracha', cursive;
+  color: #000;
+  text-decoration: none;
+  margin-left:50px;
+}
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #EEEEEE;
+  margin-right: 20px;
+  font-size: larger;
+}
+.nav-items a:hover{
+  color:red;
+}
+.nav-items a {
+  text-decoration: none;
+  color: #000;
+  padding: 35px 20px;
+}
+h1{
+    font-size: 60px;
+    color: #ffffff;
+    font-weight: 100;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin:30px 100px 0px 100px;
+
+}
+div{
+    margin: 70px;
+    margin-left:100px;
+    line-height: 40px;
+    font-size: 30px;
+    color: #ffffff;
+    line-height: 45px;
+    
+}
+
+.tab{
+    width: 40%;
+    height: 25px;
+    opacity: 0.8;
+    
+
+}
+.tab:hover{
+    border:3px solid #000;
+}
+#submit{
+    padding: 12px;
+    font-size: 13px;
+    text-decoration: solid;
+    color: black;
+    font-weight: 900;
+    margin-top:0px;
+    margin-left: 200px;
+}
+#submit:hover{
+    border:4px solid #000;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Siccsegv</a>
+        <nav class="nav-items">
+          <a href="home.html">Home</a>
+          <a href="Services.html">Services</a>
+          <a href="about.html">About us</a>
+          <a href="contact.html">Contact us</a>
+        </nav>
+    </header>
+
+    <h1>
+        Contact Us
+    </h1>
+    <form>
+        <div>
+            <label>First Name:</label><br>
+            <input type="text" name="fname" id="fname" class="tab" placeholder="firstname" required><br>
+            <label>Last Name:</label><br>
+            <input type="text" name="lname" class="tab" placeholder="lastname"><br>
+            <label>Email:</label><br>
+            <input type="email" name="mail" id="mail" class="tab" placeholder="email" required><br>
+            <label>How can we help you?</label><br>
+            <textarea placeholder="message here" class="tab" name="message" id="message" style="height: 60px;" required></textarea><br>
+            <input type="submit" name="submit1" id="submit" value="SUBMIT" onclick="fun()">
+        </div>
+    </form>
+    
+    <script>
+        function fun() {
+            var fname = document.getElementById("fname").value;
+            var mail = document.getElementById("mail").value;
+            var message = document.getElementById("message").value;
+    
+            if (fname !== "" && mail !== "" && message !== "") {
+                window.alert("Your query is successfully submitted.");
+            } else {
+                window.alert("Please fill in all required fields.");
+            }
+        }
+    </script>
+    
+    
+    
+    
+</body>
+</html>
